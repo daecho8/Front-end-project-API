@@ -1,3 +1,9 @@
+jQuery.ajaxPrefilter(function(options) {
+    if (options.crossDomain && jQuery.support.cors) {
+        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+    }
+});
+
 const $submitBtn = $('#submit').on( "mouseenter", function() {  //SEARCH BTN color change on
     $(this).css({
       "background-color": "green",
@@ -18,23 +24,22 @@ console.log($input);
 $submitBtn.click(()=>{
     const userInput = ($input.val()).toUpperCase();
     $.getJSON(`https://api.aviationapi.com/v1/airports?apt=${userInput}`, (data)=> {        //airport info
-    // console.log(data)
-    // console.log(data[userInput]);
-    // console.log(data[userInput][0]);
-    const airportName = data[userInput][0]["facility_name"];
-    const city = data[userInput][0]["city"];
-    const county = data[userInput][0]["county"];
-    const state = data[userInput][0]["state"];
-    $("#result").css("backgroundColor", "white").css("width", "30%");
-    $(".infoOne").text(`${userInput}` + " Airport");
-    $(".airport-name").text("Full Name: " + airportName);
-    $(".airport-city").text("City: " + city);
-    $(".airport-county").text("County: " + county);
-    $(".airport-state").text("State: " + state);
+        // console.log(data)
+        // console.log(data[userInput]);
+        // console.log(data[userInput][0]);
+        const airportName = data[userInput][0]["facility_name"];
+        const city = data[userInput][0]["city"];
+        const county = data[userInput][0]["county"];
+        const state = data[userInput][0]["state"];
+        $("#result").css("backgroundColor", "white").css("width", "30%");
+        $(".infoOne").text(`${userInput}` + " Airport");
+        $(".airport-name").text("Full Name: " + airportName);
+        $(".airport-city").text("City: " + city);
+        $(".airport-county").text("County: " + county);
+        $(".airport-state").text("State: " + state);
 
-});
+    });
    
-
     $.getJSON(`https://api.aviationapi.com/v1/weather/metar?apt=K${userInput}`, (data)=> {      //weather info
         // console.log(data['K'+ userInput]['wind']);
         const wind = data['K'+ userInput]['wind'];
