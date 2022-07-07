@@ -7,28 +7,36 @@
     <link href="style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script defer src="app.js"></script>
-    <title>aviation api</title>
+    <title>Airport with API</title>
 </head>
 <body>
+    <header>
+        <div id="main-top">
+            <h1>AIRPORT SEARCH</h1>
+            <p>with AVIATION API</p>
+        </div>
+        
+    </header>
+        <input type="text" name='search' size="80" placeholder="    Airport ID (BWI / AVL / ATL / ...)">
+        <button id="submit">SEARCH</button>
+    <span id="testing">
+        <div id="result">
+            <h2 class="infoOne"></h3>                
+            <P class="airport-name"></P>
+            <P class="airport-city"></P>
+            <P class="airport-county"></P>
+            <P class="airport-state"></P>                
+        </div>
 
-    <input type="text" name='search'>
-    <button id="submit">search</button>
-
-    <div id="result">
-        <h1 class="infoOne"></h1>
-        <h2 class="airport-name"></h1>
-        <h3 class="airport-city"></h2>
-        <h3 class="airport-state"></h2>
-    </div>
-
-    <div id="weather">
-        <h1 class="infoTwo"></h1>
-        <h2 class="airport-weather"></h1>
-        <h3 class="weather-reportTime"></h2>
-        <h3 class="weather-temp"></h3>
-        <h3 class="weather-visiability"></h3>
-        <h3 class="weather-wind"></h3>
-    </div>
+        <div id="weather">
+            <h2 class="infoTwo"></h3>
+            <p class="airport-weather"></p>
+            <p class="weather-reportTime"></p>
+            <p class="weather-temp"></p>
+            <p class="weather-visiability"></p>
+            <p class="weather-wind"></p>
+        </div>
+    </span>
 </body>
 </html>
 

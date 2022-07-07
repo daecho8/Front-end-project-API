@@ -1,3 +1,51 @@
-h1 {
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0%;
+    text-align: center;
+    font-size: 80%;
+    
+    background-image: url("https://i.pinimg.com/originals/2a/6d/a6/2a6da6ba7c9eefae5bff282ed56e0604.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+div {
+    width: 100%;
+
+}
+
+#main-top {
     font-style: italic;
+    font-size: 60PX;
+    border: 1px solid black;
+    background-color: skyblue;
+    letter-spacing: 0.3em;
+}
+
+h2, h3, p {
+    font-size: 20px;
+}
+input, button {
+    border-radius: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+    
+}
+
+button {
+    background-color: rgb(135, 210, 250);
+}
+
+.infoOne, .infoTwo {
+    font-style: italic;
+    color:rgb(135, 210, 250)
+}
+#result, #weather{
+    padding-block: 30px;
+    float: center;
+    text-align: center;
+    font-weight: bolder;
+    color: black;
+    margin-left: 35%;
 }
