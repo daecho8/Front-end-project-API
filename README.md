@@ -9,12 +9,12 @@
     - When cursor is on the "SEARCH" button, it changes color of the button (gray to green).
 
 3. Airport information and weather information shows in the middlbe of the screen under the search box.
-    Airport
+    * Airport
     - Full name of the airport
     - City
     - County
     - State
-    Weather
+    * Weather
     - Report time (the most updated time).
     - Temperature
     - Visibility
@@ -28,7 +28,7 @@
 
 * CORS ERROR was one of the main probelm from this project.
 * It was solve by automatically enable cross-domain requests as following: 
-(function() {
+- (function() {
     var cors_api_host = 'cors-anywhere.herokuapp.com';
     var cors_api_url = 'https://' + cors_api_host + '/';
     var slice = [].slice;
